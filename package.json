@@ -1,0 +1,23 @@
+{
+  "name": "hapitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jasonspd/hapitest.git"
+  },
+  "author": "Jason Luu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jasonspd/hapitest/issues"
+  },
+  "homepage": "https://github.com/Jasonspd/hapitest",
+  "dependencies": {
+    "hapi": "^11.1.2",
+    "inert": "^3.2.0"
+  }
+}
