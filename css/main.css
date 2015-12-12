@@ -1,0 +1,27 @@
+h1 {
+	color: #0066cc;
+}
+
+.container {
+	margin-top: 1%;
+}
+
+input.btn.btn-primary {
+	margin-left: 15px;
+}
+
+input.btn.btn-default {
+	color: black;
+	font-size: 18px;
+}
+
+.friendbox input {
+	width: 100%;
+	min-height: 100px;
+	background-color: #009999;
+	margin-bottom: 10px;
+}
+
+ul.nav.navbar-nav.navbar {
+	margin-left: 20px;
+}

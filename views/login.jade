@@ -1,0 +1,29 @@
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+		link(href='/css/main.css', rel='stylesheet', type='text/css')
+
+	body
+		.container
+			.col-md-12
+				form.form-horizontal(role='form' action='/login' method='POST')
+					.form-group
+						label.control-label.col-sm-2(for='userame') Username:
+						.col-sm-4
+							input.form-control(name='username' type='text' value='' required)
+					.form-group
+						label.control-label.col-sm-2(for='password') Password:
+						.col-sm-4
+							input.form-control(name='password' type='text' value='' required)
+					.form-group
+						input.btn.btn-primary.login(type='submit' value='Login')
+				a.btn.btn-primary(href='/register') Sign up now
+			if success
+				.col-md-12
+					.alert.alert-success(role='alert') You are registered now, please login.
+			if fail
+				.col-md-12
+					.alert.alert-warning(role='alert') Your username and/or password is incorrect. Please try again.
