@@ -1,24 +1,8 @@
-html
-	head
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		meta(http-equiv='X-UA-Compatible' content='IE=edge')
-		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', type='text/css')
-		link(href='/css/main.css', rel='stylesheet', type='text/css')
+extend layouts/default
 
-	body
-		.container-fluid
-		.row.nav
-			.navbar.navbar-default.site
-				ul.nav.navbar-nav
+block content
 
-				ul.nav.navbar-nav.navbar
-					li
-						a(href="/user") #{myusername}
-					li
-						a(href="/friends") Friends
-					li
-						a(href="/logout") Log out
+		include includes/navbar
 		.container
 			.col-md-12
 				h1 Welcome #{user.username}

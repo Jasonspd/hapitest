@@ -1,37 +1,32 @@
-html
-	head
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		meta(http-equiv='X-UA-Compatible' content='IE=edge')
-		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', type='text/css')
-		link(href='/css/main.css', rel='stylesheet', type='text/css')
+extend layouts/default
 
-	body
-		.container
+block content
+
+	.container
+		.col-md-12
+			form.form-horizontal(role='form' action='/register' method='POST')
+				.form-group
+					label.control-label.col-sm-2(for='username') Username:
+					.col-sm-4
+						input.form-control(name='username' type='text' value='' required)
+				.form-group
+					label.control-label.col-sm-2(for='firstName') First Name:
+					.col-sm-4
+						input.form-control(name='firstName' type='text' value='')
+				.form-group
+					label.control-label.col-sm-2(for='lastName') Last Name:
+					.col-sm-4
+						input.form-control(name='lastName' type='text' value='')
+				.form-group
+					label.control-label.col-sm-2(for='email') Email:
+					.col-sm-4
+						input.form-control(name='email' type='text' value='' required)
+				.form-group
+					label.control-label.col-sm-2(for='password') Password:
+					.col-sm-4
+						input.form-control(name='password' type='text' value='' required)
+				.form-group
+					input.btn.btn-primary(type='submit' value='Register')
+		if fail
 			.col-md-12
-				form.form-horizontal(role='form' action='/register' method='POST')
-					.form-group
-						label.control-label.col-sm-2(for='username') Username:
-						.col-sm-4
-							input.form-control(name='username' type='text' value='' required)
-					.form-group
-						label.control-label.col-sm-2(for='firstName') First Name:
-						.col-sm-4
-							input.form-control(name='firstName' type='text' value='')
-					.form-group
-						label.control-label.col-sm-2(for='lastName') Last Name:
-						.col-sm-4
-							input.form-control(name='lastName' type='text' value='')
-					.form-group
-						label.control-label.col-sm-2(for='email') Email:
-						.col-sm-4
-							input.form-control(name='email' type='text' value='' required)
-					.form-group
-						label.control-label.col-sm-2(for='password') Password:
-						.col-sm-4
-							input.form-control(name='password' type='text' value='' required)
-					.form-group
-						input.btn.btn-primary(type='submit' value='Register')
-			if fail
-				.col-md-12
-					.alert.alert-warning(role='alert') Your username or email has been taken, please try a different one.
+				.alert.alert-warning(role='alert') Your username or email has been taken, please try a different one.
