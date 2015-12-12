@@ -16,7 +16,7 @@ Mongoose.connect('mongodb://admin:admin@ds027505.mongolab.com:27505/techtest');
 var db = Mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
-	console.log('connected to database' + db);
+	console.log('connected to remote mogodb');
 });
 
 //------------------------------------------SERVER
