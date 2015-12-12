@@ -1,0 +1,32 @@
+extend layouts/default
+
+block content
+
+	.container
+		.col-md-12
+			form.form-horizontal(role='form' action='/register' method='POST')
+				.form-group
+					label.control-label.col-sm-2(for='username') Username:
+					.col-sm-4
+						input.form-control(name='username' type='text' value='' required)
+				.form-group
+					label.control-label.col-sm-2(for='firstName') First Name:
+					.col-sm-4
+						input.form-control(name='firstName' type='text' value='')
+				.form-group
+					label.control-label.col-sm-2(for='lastName') Last Name:
+					.col-sm-4
+						input.form-control(name='lastName' type='text' value='')
+				.form-group
+					label.control-label.col-sm-2(for='email') Email:
+					.col-sm-4
+						input.form-control(name='email' type='text' value='' required)
+				.form-group
+					label.control-label.col-sm-2(for='password') Password:
+					.col-sm-4
+						input.form-control(name='password' type='text' value='' required)
+				.form-group
+					input.btn.btn-primary(type='submit' value='Register')
+		if fail
+			.col-md-12
+				.alert.alert-warning(role='alert') Your username or email has been taken, please try a different one.

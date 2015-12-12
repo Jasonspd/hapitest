@@ -1,0 +1,35 @@
+extend layouts/default
+
+block content
+
+		include includes/navbar
+		.container
+			.col-md-12
+				h1 My friends
+				br
+			.input-group-lg
+				form.form-horizontal(role="form" action="/friends" method="POST")
+					input.form-control(type="text" name="friends" placeholder="Add your friend here by searching his username")
+			br
+			.col-md-12
+				if friendlist
+					each friend in friendlist.friends
+						.col-md-4
+							form.friendbox(action="/delete/friend" method="POST")
+								input.btn.btn-default(type="submit" name="del" value="#{friend}")
+			.col-md-12
+				if epicfail
+					.col-md-12
+						.alert.alert-warning(role='alert') You can't add yourself as a friend!
+			.col-md-12
+				if fail
+					.col-md-12
+						.alert.alert-warning(role='alert') This username does not exist.
+	script.
+
+		$("input").keypress(function(event) {
+		    if (event.which == 13) {
+		        event.preventDefault();
+		        $("form").submit();
+		    }
+		});
