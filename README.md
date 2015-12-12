@@ -6,6 +6,6 @@ Second draft for the technical test
 Built using/with Node.js, Hapi,Jade, MongoDB
 
 To run:
--Clone repo
--npm install
--npm start
+- Clone repo
+- npm install
+- npm start
