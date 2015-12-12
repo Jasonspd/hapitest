@@ -5,3 +5,8 @@ Basic first draft for the technical test
 - Users can search other users by username, add and remove friends
 
 Built using/with Node.js, Hapi,Jade, MongoDB
+
+To run:
+- Clone repo
+- npm install
+- npm start
